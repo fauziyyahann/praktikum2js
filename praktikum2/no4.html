@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>no.4 </title>
+</head>
+<body>
+    <select name="alat musik" id="almus" onclick="gambarAlmus()" onmouseout="imageConfirmation()">
+        <option selected disabled>Pilih</option>
+        <option value="git">Gitar</option>
+        <option value="drum">Drum</option>
+        <option value="pia">Piano</option>
+        <option value="cla">Clarinet</option>
+        <option value="bass">Bass</option>
+    </select>
+    <div>
+        <img src="#" alt="" width="500px" id="hasil">
+    </div>
+
+
+
+    <script>
+        const hs = document.getElementById("hasil")
+        const almus = document.getElementById("almus")
+
+        function gambarAlmus(){
+            if (almus.value == "git"){
+                return hs.src = "gitar.jpg"
+            }
+            else if (almus.value == "drum"){
+                return hs.src = "drum.jpg"
+            }
+            else if (almus.value == "pia"){
+                return hs.src = "piano.jpg"
+            }
+            else if (almus.value == "cla"){
+                return hs.src = "clarinet.jpg"
+            }
+            else if (almus.value == "bass"){
+                return hs.src = "bass.jpg"
+            }
+        
+        }
+        function imageConfirmation() {
+            alert(hs.src)
+        }
+    </script>
+</body>
+</html>

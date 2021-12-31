@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            visibility: hidden;
+        }
+
+        h1 {
+            visibility: hidden;
+        }
+
+        #tab {
+            border: 1px solid black;
+            visibility: hidden;
+        }
+
+        td, th {
+            padding: 10px;
+            background-color: #A3E4DB;
+        }
+
+        #haduh {
+            background-color: #A3E4DB;
+            width: 30%;
+            padding: 10px;
+        }
+
+        h2 {
+            color: darkslateblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Form Validation</h2>
+<div id="haduh">
+    <input id="nama" type="text" placeholder="Masukkan Nama" >
+    <span>Nama Tidak Boleh Kosong</span>
+    <br>
+    <input id="email" type="text" placeholder="Masukkan Email Anda">
+    <span>Email Tidak Boleh Kosong</span>
+    <br>
+    <input id="jam" type="time">
+    <span>Jam Keberangkatan Tidak Boleh Kosong</span>
+    <br>
+    <input id="tujuan" type="text" placeholder="Tujuan Keberangkatan">
+    <span>Tujuan Keberangkatan</span>
+    <br>
+    <input id="jumlah" type="number" placeholder="Masukkan Jumlah Tiket" min="1" max="10">
+    <span>Jumlah Tiket Tidak Boleh Kosong</span>
+    <br>
+    <button onclick="proses()">Kirim</button>
+</div>
+    <h1>Sukses</h1>
+
+    <table id="tab">
+        <tr>
+            <th>Nama pemesan</th>
+            <th>Email</th>
+            <th>Jam</th>
+            <th>Tujuan</th>
+            <th>Jumlah</th>
+        </tr>
+        <tr>
+            <td id="np"></td>
+            <td id="em"></td>
+            <td id="jm"></td>
+            <td id="tj"></td>
+            <td id="jml"></td>
+        </tr>
+    </table>
+
+    <script>
+        let nama = document.getElementById 
+        ("nama")
+        let email = document.getElementById 
+        ("email")
+        let jam = document.getElementById 
+        ("jam")
+        let tujuan = document.getElementById 
+        ("tujuan")
+        let jumlah = document.getElementById 
+        ("jumlah")
+        let span = document.getElementsByTagName("span")
+        
+
+        function proses() {
+            if (nama.value == "" ) {
+            span[0].style.visibility = "visible"}
+            if (email.value == "" ) {
+            span[1].style.visibility = "visible"}
+            if (jam.value == "" ) {
+            span[2].style.visibility = "visible"}
+            if (tujuan.value == "" ) {
+            span[3].style.visibility = "visible"}
+            if (jumlah.value == "" ) {
+            span[4].style.visibility = "visible"}
+            else {
+                let kirim = document.getElementById("kirim");
+                let np = document.getElementById("np")
+                let em = document.getElementById("em")
+                let jm = document.getElementById("jm")
+                let tj = document.getElementById("tj")
+                let jml = document.getElementById("jml")
+                let td = document.getElementById("tab")
+
+                td.style.visibility = "visible"
+                np.innerHTML = nama.value
+                em.innerHTML = email.value
+                jm.innerHTML = jam.value
+                tj.innerHTML = tujuan.value
+                jml.innerHTML = jumlah.value
+            }
+        }
+    </script>
+</body>
+</html>

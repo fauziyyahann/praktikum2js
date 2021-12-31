@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2 JavaScript</title>
+</head>
+<body>
+    <fieldset  style="background-color: #FFF3E4;">
+        <h3 style="color: #6B4F4F;">Chat</h3>
+        <table border="2" style="width: 300px; height: 450px; border: #483434 1px;">
+            <tr>
+                <td>
+                    <div id="chat" style="height: 300px; width: 100px;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="comment" style="width: 80%;">
+                    <button type="button" id="submit" onclick="komen()">Send</button>
+                </td>
+            </tr>
+        </table>
+        <br>
+    </fieldset>
+    
+
+    <script>
+        function komen() {
+            let pesan = document.createElement("P")
+            pesan.innerHTML = String(document.getElementById("comment").value)
+            document.getElementById("chat").appendChild(pesan)
+        }
+    </script>
+</body>
+</html>

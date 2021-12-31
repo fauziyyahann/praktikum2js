@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas 1 JavaScript</title>
+</head>
+<body>
+    <fieldset style="background-color: #DFD3C3;"><h3 style="color: #A68DAD;">Konversi Mata Uang</h3>
+    <table border="2" cellspacing="0" cellpadding="5">
+        <tr style="text-align: center">
+            <td>Masukkan Nilai</td>
+            <td>Valas</td>
+            <td>Nilai Rupiah</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="nilai" value=""></td>
+            <td>
+                <select id="matauang" onchange="convert()">
+                    <option value="">Pilih Valas</option>
+                    <option value="us">Dollar US</option>
+                    <option value="sgp">Dollar Singapore</option>
+                    <option value="mas">Ringgit Malaysia</option>
+                    <option value="jpn">Yen Jepang</option>
+                    <option value="eur">Euro</option>
+                    <option value="uae">Riyal Arab Saudi</option>
+                </select>
+            </td>
+            <td id="hasil"><input type="text" disabled></td>
+        </tr>
+    </table>
+    <br><br>
+    </fieldset>
+
+    <script>
+        function convert() {
+            var matauang = document.getElementById("matauang").value
+            var nilai = document.getElementById("nilai").value
+            
+            if (matauang == "us") {
+                let jumlah = nilai 
+                let dollar = 9915
+                let total = jumlah * dollar
+                console.log(total)
+                let hasil = document.getElementById("hasil")
+                hasil.innerHTML = "Rp. " + total
+            } 
+            else if (matauang == "sgp") {
+                let jumlah = nilai
+                let dollar = 13472
+                let total = jumlah * dollar
+                console.log(total)
+                let hasil = document.getElementById("hasil")
+                hasil.innerHTML = "Rp. " + total
+            }
+            else if (matauang == "mas") {
+                let jumlah = nilai
+                let ringgit = 874
+                let total = jumlah * ringgit
+                console.log(total)
+                let hasil = document.getElementById("hasil")
+                hesil.innerHTML = "Rp. " + total
+            }
+            else if (matauang == "jpn") {
+                let jumlah = nilai
+                let yen = 120
+                let total = jumlah * yen
+                console.log(total)
+                let hasil = document.getElementById("hasil")
+                hasil.innerHTML = "Rp. " + total
+            }
+            else if (matauang == "eur") {
+                let jumlah = nilai
+                let euro = 15888
+                let total = jumlah * euro
+                console.log(total)
+                let hasil = document.getElementById("hasil")
+                hasil.innerHTML = "Rp. " + total
+            }
+            else {
+                let jumlah = nilai
+                let riyal = 3592
+                let total = nilai * riyal
+                console.log(total)
+                let hasil = document.getElementById("hasil")
+                hasil.innerHTML = "Rp. " + total
+            }
+        }
+    </script>
+</body>
+</html>
